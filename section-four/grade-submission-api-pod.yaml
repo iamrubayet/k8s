@@ -8,7 +8,6 @@ metadata:
     app.kubernetes.io/component: backend
     app.kubernetes.io/instance: grade-submission-api
 spec:
-  restartPolicy: Always
   containers:
   - name: grade-submission-api
     image: rslim087/kubernetes-course-grade-submission-api:stateless
