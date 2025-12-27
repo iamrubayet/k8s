@@ -16,3 +16,14 @@ kubectl port-forward grade-submission-portal 5001:5001
 kubectl delete pod grade-submission-portal
 
 kubectl delete pods --all
+
+kubectl create namespace grade-submission
+
+kubectl apply -f . -n grade-submission
+
+kubectl get pods -n grade-submission
+
+kubectl delete pods --all -n grade-submission
+
+
+kubectl delete namespace grade-submission
