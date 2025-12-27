@@ -29,3 +29,5 @@ kubectl delete pods --all -n grade-submission
 kubectl delete namespace grade-submission
 
 kubectl get deployments -n grade-submission
+
+kubectl rollout undo deployment/grade-submission-api -n grade-submission
