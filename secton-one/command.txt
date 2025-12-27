@@ -1,0 +1,18 @@
+kubectl config current-context
+
+kubectl apply -f grade-submission-portal-pod.yaml
+
+kubectl get pods
+
+kubectl describe pod grade-submission-portal
+
+kubectl logs grade-submission-portal
+
+
+kubectl logs -f grade-submission-portal
+
+kubectl port-forward grade-submission-portal 5001:5001
+
+kubectl delete pod grade-submission-portal
+
+kubectl delete pods --all
