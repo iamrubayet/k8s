@@ -31,3 +31,17 @@ kubectl delete namespace grade-submission
 kubectl get deployments -n grade-submission
 
 kubectl rollout undo deployment/grade-submission-api -n grade-submission
+
+kubectl delete deployments --all -n grade-submission
+
+kubectl get services -n grade-submission
+
+kubectl delete services --all -n grade-submission
+
+kubectl get statefulsets -n grade-submission
+
+kubectl delete statefulsets --all -n grade-submission
+
+kubectl get pvc -n grade-submission
+
+kubectl delete pvc --all -n grade-submission
