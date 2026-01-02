@@ -55,3 +55,13 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 helm template .
 
 helm package .
+
+helm install grade-submission-portal ./grade-submission-portal-0.1.0.tgz --namespace grade-submission --create-namespace
+
+helm uninstall grade-submission-portal -n grade-submission
+
+helm list -A
+
+helm upgrade grade-submission-portal ./grade-submission-portal-0.1.0.tgz -n grade-submission
+
+helm rollback grade-submission-portal 1 -n grade-submission
