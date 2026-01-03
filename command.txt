@@ -72,3 +72,13 @@ helm upgrade grade-submission-portal . -n grade-submission
 helm install grade-submission-api . -n grade-submission 
 helm upgrade grade-submission-api . -n grade-submission
 helm install mongodb bitnami/mongodb ---version=18.0.5 -f values.yaml -n mongodb
+
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm search repo bitnami/mongodb
+helm repo remove bitnami
+
+helm repo add mongodb https://mongodb.github.io/helm-charts
+helm repo update
+helm search repo mongodb/community-mongodb
+helm repo remove mongodb
