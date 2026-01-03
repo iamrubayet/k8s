@@ -65,3 +65,10 @@ helm list -A
 helm upgrade grade-submission-portal ./grade-submission-portal-0.1.0.tgz -n grade-submission
 
 helm rollback grade-submission-portal 1 -n grade-submission
+
+
+helm install grade-submission-portal . -n grade-submission 
+helm upgrade grade-submission-portal . -n grade-submission
+helm install grade-submission-api . -n grade-submission 
+helm upgrade grade-submission-api . -n grade-submission
+helm install mongodb bitnami/mongodb ---version=18.0.5 -f values.yaml -n mongodb
