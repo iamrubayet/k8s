@@ -82,3 +82,7 @@ helm repo add mongodb https://mongodb.github.io/helm-charts
 helm repo update
 helm search repo mongodb/community-mongodb
 helm repo remove mongodb
+
+eksctl create cluster --name my-cluster --region us-east-1 --nodes 2 --node-type t3.medium
+
+eksctl delete cluster --name my-cluster --region us-east-1
